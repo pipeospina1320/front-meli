@@ -12,6 +12,6 @@
 
 .breadcrumb {
     grid-column-start: 2;
-    text-align: center;
-    display: flex;
+    grid-column-end: 12;
+    color: #999999;
 }

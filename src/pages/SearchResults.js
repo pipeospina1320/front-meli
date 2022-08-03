@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import Header from '../layouts/header';
 import Item from '../components/Item';
+import Breadcrumb from '../components/Breadcrumb';
 import endPoints from '../routes/endpoint';
 import useApi from '../hooks/useApi';
 
@@ -20,19 +21,22 @@ export default function SearchResults() {
         limit: 4,
       };
       const { categories, items } = await doGet(endPoints.search, params);
+      const { values = [] } = categories || {};
+      const paths = values[0].path_from_root;
       setState({
-        categories, items,
+        categories: paths, items,
       });
     };
 
     loadInitForm();
   }, []);
 
-  const { items } = state;
+  const { items, categories } = state;
   return (
     <>
       <Header />
-      {/* <Breadcrumb categories={categories} /> */}
+      {categories.length > 0 && <Breadcrumb categories={categories} />}
+
       {(items.length !== 0)
       && (items.map(({
         id, price, title, picture, condition, free_shipping: freeShipping,
