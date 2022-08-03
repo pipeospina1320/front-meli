@@ -1,0 +1,59 @@
+header {
+    height: 50px;
+    background-color: #FFE600;
+    display: grid;
+    grid-template-columns: 7% 7% 7% 7% 7% 7% 7% 7% 7% 7% 7% 7%;
+    grid-gap: 11px;
+    align-items: center;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.logo-container {
+    grid-column-start: 2;
+    text-align: center;
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+}
+
+.input-container {
+    grid-column-start: 3;
+    grid-column-end: 12;
+    background-color: white;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.form-sarch{
+    height: 30px;
+    display: flex;
+}
+
+.input-search {
+    box-sizing: border-box;
+    border-radius: 2px;
+    width: 100%;
+    border: none; 
+    outline: none;
+    padding-left: 10px;
+}
+
+.input::placeholder {
+    color: #999999;
+    font-size: 14px;
+  }
+
+.search-icon {
+    border: none;
+    border-radius: 2px;
+    background-position: center;
+    background-image: url('/public/assets/ic_Search@2x.png.png');
+    background-size: 12px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}

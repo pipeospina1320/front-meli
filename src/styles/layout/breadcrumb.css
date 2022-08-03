@@ -1,0 +1,17 @@
+.breadcrumb-container {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    height: 16px;
+    display: grid;
+    grid-template-columns: 7% 7% 7% 7% 7% 7% 7% 7% 7% 7% 7% 7%;
+    grid-gap: 11px;
+    align-items: center;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.breadcrumb {
+    grid-column-start: 2;
+    text-align: center;
+    display: flex;
+}
